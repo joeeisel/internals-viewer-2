@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A86E4F75-BCD8-4BD7-B010-9D60B7B79C1A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InternalsViewer.Internals.Models</RootNamespace>
+    <AssemblyName>InternalsViewer.Internals.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\Address\LogSequenceNumber.cs" />
+    <Compile Include="Engine\Address\PageAddress.cs" />
+    <Compile Include="Engine\Address\RowIdentifier.cs" />
+    <Compile Include="Engine\BlobPointers\BlobChildLink.cs" />
+    <Compile Include="Engine\BlobPointers\BlobField.cs" />
+    <Compile Include="Engine\BlobPointers\BlobFieldType.cs" />
+    <Compile Include="Engine\BlobPointers\BlobType.cs" />
+    <Compile Include="Engine\BlobPointers\OverflowField.cs" />
+    <Compile Include="Engine\BlobPointers\PointerField.cs" />
+    <Compile Include="Engine\BlobPointers\RootField.cs" />
+    <Compile Include="Engine\Compression\CdArrayItem.cs" />
+    <Compile Include="Engine\Compression\CompressionInformation.cs" />
+    <Compile Include="Engine\Compression\CompressionInfoStructure.cs" />
+    <Compile Include="Engine\Compression\CompressionType.cs" />
+    <Compile Include="Engine\Compression\Dictionary.cs" />
+    <Compile Include="Engine\Compression\DictionaryEntry.cs" />
+    <Compile Include="Engine\Allocations\AllocationMap.cs" />
+    <Compile Include="Engine\Pages\IndexAllocationMapPage.cs" />
+    <Compile Include="Metadata\AllocationUnit.cs" />
+    <Compile Include="Engine\Database\BufferPool.cs" />
+    <Compile Include="Engine\Database\DatabaseContainer.cs" />
+    <Compile Include="Metadata\AllocationUnitType.cs" />
+    <Compile Include="Metadata\Database.cs" />
+    <Compile Include="Metadata\File.cs" />
+    <Compile Include="Engine\Allocations\IndexAllocationMap.cs" />
+    <Compile Include="Engine\Allocations\PageFreeSpace.cs" />
+    <Compile Include="Engine\Allocations\PfsByte.cs" />
+    <Compile Include="Engine\Allocations\SpaceFree.cs" />
+    <Compile Include="Engine\Pages\AllocationMapPage.cs" />
+    <Compile Include="Engine\Pages\BootPage.cs" />
+    <Compile Include="Engine\Pages\Header.cs" />
+    <Compile Include="Engine\Pages\Page.cs" />
+    <Compile Include="Engine\Pages\PageEventArgs.cs" />
+    <Compile Include="Engine\Pages\PageType.cs" />
+    <Compile Include="Engine\Pages\PageFreeSpacePage.cs" />
+    <Compile Include="Engine\Pages\RawPage.cs" />
+    <Compile Include="Engine\Records\Blob\BlobRecord.cs" />
+    <Compile Include="Engine\Records\Compressed\CompressedDataRecord.cs" />
+    <Compile Include="Engine\Records\Compressed\CompressedRecordField.cs" />
+    <Compile Include="Engine\Records\Data\DataRecord.cs" />
+    <Compile Include="Engine\Records\Field.cs" />
+    <Compile Include="Engine\Records\IndexTypes.cs" />
+    <Compile Include="Engine\Records\Index\IndexRecord.cs" />
+    <Compile Include="Engine\Records\Record.cs" />
+    <Compile Include="Engine\Records\RecordField.cs" />
+    <Compile Include="Engine\Records\RecordType.cs" />
+    <Compile Include="Engine\Records\SparseVector.cs" />
+    <Compile Include="Marking\Markable.cs" />
+    <Compile Include="Marking\MarkerStyleAttribute.cs" />
+    <Compile Include="Marking\MarkerStyleType.cs" />
+    <Compile Include="Marking\MarkItem.cs" />
+    <Compile Include="Metadata\Column.cs" />
+    <Compile Include="Metadata\HobtEntryPoint.cs" />
+    <Compile Include="Metadata\IndexColumn.cs" />
+    <Compile Include="Metadata\IndexStructure.cs" />
+    <Compile Include="Metadata\HobtStructure.cs" />
+    <Compile Include="Metadata\StructureType.cs" />
+    <Compile Include="Metadata\TableStructure.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
